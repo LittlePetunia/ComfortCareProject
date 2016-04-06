@@ -1,0 +1,3 @@
+jumbotron:../img/head2.jpg
+
+textbook.jpg:http://jgollner.typepad.com/.a/6a00e54f8d0913883301156eb5bf08970c-800wi
