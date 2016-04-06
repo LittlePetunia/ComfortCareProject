@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ./partials/head.ejs %>
+        <link rel="stylesheet" type="text/css" href="/css/footer.css">
+        <link rel="stylesheet" type="text/css" href="/css/dropdown.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+                function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+    </head>
+    <body>
+        <% include ./partials/handle-nav.ejs %>
+        <div class="main">
+            <h1><%= user.google.name %> Profile</h1>
+            <div class="main-grid1">
+                <div class="main-grid1-left">
+                    <img src="/img/personal.png" alt=" " class="img-responsive" />
+                </div>
+                <div class="main-grid1-right">
+                    <h2><%= user.google.name %></h2>
+                    <p><em><%= user.description %></em></p>
+                    <ul>
+                        <li><a class="btn btn-primary"
+                            href="/users/<%= user.id %>/edit_profile.html">
+                            <i class="fa fa-wrench"> Edit Profile</i>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="clear"> </div>
+            </div>
+            <div class="main-grid3">
+                <p>Your ID: <em> <%= user.id %></em></p>
+                <p>Your Local email: <em><%= user.local.email %></em></p>
+                <p>Your Phone number: <em><%= user.phone %></em></p>
+            </div>
+        </div>
+        <% include ./partials/footer.ejs %>
+    </body>
+</html>
