@@ -27,9 +27,9 @@ router.post('/apply', validateFields, function(req, res){
     if (req.body.phone){
 		newapply.phone = req.body.phone;
 	}
-	if (req.body.city){
-		newapply.city = req.body.city;
-	}
+	if (req.body.description){
+        newapply.description = req.body.description;
+    }
 	if (req.body.latitude){
 	 	newapply.latitude = req.body.latitude;
 	 }

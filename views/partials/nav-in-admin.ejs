@@ -7,6 +7,7 @@
             <li id="navHome" role="presentation"><a href="/home.html">Home</a></li>
             <li id="navAboutUs" role="presentation"><a href="/about-us.html">About Us</a></li>
             <li id="navSearchPostings" role="presentation"><a href="/search-postings.html">Search Postings</a></li>
+            <li id="navViewVolun" role="presentation"><a href="/view-volun.html">View Volunteer</a></li>
             <li id="navViewUsers" role="presentation"><a href="/view-users.html">View Users</a></li>
 
             <li id="navMyAccount" role="presentation" class="dropdown">
@@ -53,5 +54,8 @@
     }
     if (selectedTab == "inbox"){
         $("#navInbox").attr("class", "active");
+    }
+    if (selectedTab == "view-volun"){
+        $("#navViewVolun").attr("class", "active");
     }
 </script>
