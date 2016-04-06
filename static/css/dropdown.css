@@ -1,0 +1,97 @@
+@font-face {font-family: Raleway; src: url("../font/raleway/RalewayThin.otf"); src: url("..font/raleway/RalewayThin.ttf");}
+@font-face {font-family: mediaGothic; src: url("../font/mediaGothic/MediaGothic.ttf");}
+
+
+.dropdown-menu {
+	width:100%;
+}
+
+#main-title{
+	font-family: mediaGothic;
+	margin-left: 80px;
+	margin-top: -50px;
+	margin-bottom: 30px;
+	text-align: left;
+
+}
+#user-title{
+	font-family: mediaGothic;
+	margin-top: -20px;
+	margin-bottom: 30px;
+	text-align: center;
+
+
+}
+
+#logo{
+	margin-top: -10px;
+	width: 60px;
+	height: 60px;
+	margin-right: -50px;
+}
+
+#pageheader{
+   box-shadow: 0px 5px 5px #888888;
+  -webkit-box-shadow: 0px 5px 5px #888888;
+  -moz-box-shadow: 0px 5px 5px #888888;
+  z-index: 10;
+
+}
+
+
+#main-img{
+	background-color: #ba9077;
+	width: 100%;
+	margin-top: -13px;
+	z-index: -10;
+}
+.jumbotron{
+	margin-top: 15px;
+	margin-left: 100px;
+	margin-right: 100px;
+
+}
+#bottum-container{
+	background-color: #bcd5d1;
+	width: 100%;
+	box-shadow: 0px -5px 5px #888;
+  -webkit-box-shadow: 0px -5px 5px #888;
+  -moz-box-shadow: 0px -5px 5px #888;
+
+}
+#info-row{
+	margin-left: 80px;
+	margin-right: 80px;
+
+
+}
+
+#login-container{
+	margin-top: 50px;
+	margin-bottom: 100px;
+
+}
+
+#signup-container{
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+#view-volun-container{
+	margin-top: 70px;
+	margin-bottom: 100px;
+}
+
+#vew-user{
+	margin-top: 70px;
+	margin-bottom: 100px;
+
+}
+
+#search-posting-container{
+		margin-top: 30px;
+	margin-bottom: 100px;
+}
+
+
+
