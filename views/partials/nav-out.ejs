@@ -1,0 +1,38 @@
+<!--The template for navigation bar when a user is logged out -->
+<span id="selectedTab" style="display:none"><%= tab %></span>
+<div class="page-header">
+    <div class="container" >
+        <img id="logo" src="../img/logo.jpeg"/>
+        <h1 class="text-center" id = "main-title">ComfortCare</h1>
+        <ul class="nav nav-pills nav-justified" id = "nav-id">
+            <li id="navHome" role="presentation"><a href="/home.html">Home</a></li>
+            <li id="navAboutUs" role="presentation"><a href="/about-us.html">About Us</a></li>
+            <li id="navLogin" role="presentation"><a href="/login.html">Log In</a></li>
+            <li id="navSignup" role="presentation"><a href="/signup.html">Sign up</a></li>
+            <li id="navApply" role="presentation"><a href="/volunteer-apply.html">Apply</a></li>
+
+        </ul>
+    </div>
+</div>
+
+
+<!--Updates which tab is currently selected -->
+<script type="text/javascript">
+    var selectedTab = $("#selectedTab").text();
+    console.log(selectedTab);
+    if (selectedTab == "home"){
+        $("#navHome").attr("class", "active");
+    }
+    if (selectedTab == "about-us"){
+        $("#navAboutUs").attr("class", "active");
+    }
+    if (selectedTab == "login"){
+        $("#navLogin").attr("class", "active");
+    }
+    if (selectedTab == "signup"){
+        $("#navSignup").attr("class", "active");
+    }
+    if (selectedTab == "volunteer-apply"){
+        $("#navApply").attr("class", "active");
+    }
+</script>

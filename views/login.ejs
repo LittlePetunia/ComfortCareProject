@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ./partials/head.ejs %>
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <meta name="google-signin-client_id" content="459130359019-2g84gc59djnmerdcu578s0h91rea1uve.apps.googleusercontent.com">
+        <meta name="google-signin-scope" content="profile email">
+        <meta charset="UTF-8">
+        <script src="log.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="/css/footer.css">
+        <link rel="stylesheet" type="text/css" href="/css/dropdown.css">
+    </head>
+    <body>
+        <script>
+            window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '607440846087471',
+                xfbml      : true,
+                version    : 'v2.5'
+                });
+            };
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <% include ./partials/handle-nav.ejs %>
+        
+
+        <div class="container" id="login-container">
+            <div class="panel panel-primary" style="max-width:500px;margin:auto;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Log In</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form" action="/login" method="post">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
+                            
+                        </div>
+
+                        <% if (loginMessage != ""){ %>
+                            <div class="alert alert-danger"> <%= loginMessage %> </div>
+                        <% } %>
+                        
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-success">Login</button>
+                            <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Login with Google</a>
+                            <a href="#" id = "login" class="btn btn-primary"><span class="fa fa-facebook"></span> Login with Facebook</a>
+                            <a  class="fb-like"
+                                data-share="true"
+                                data-width="600"
+                                data-show-faces="true"> </a>
+
+                        </div>
+                       
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <% include ./partials/footer.ejs %>
+
+        
+        <script type="text/javascript">
+            function onSignIn(googleUser) {
+                // Useful data for your client-side scripts:
+                var profile = googleUser.getBasicProfile();
+                console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+                console.log("Name: " + profile.getName());
+                console.log("Image URL: " + profile.getImageUrl());
+                console.log("Email: " + profile.getEmail());
+
+                // The ID token you need to pass to your backend:
+                var id_token = googleUser.getAuthResponse().id_token;
+                console.log("ID Token: " + id_token);
+            };
+
+        </script>
+        
+    </body>
+
+
+</html>
